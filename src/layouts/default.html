@@ -1,0 +1,164 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viva Grid</title>
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+    <style>
+        body {
+            background: #fbfbfb;
+        }
+
+        .wrapper {
+            max-width: 1300px;
+            background: #fff;
+            margin: auto;
+        }
+
+        .special-column {
+            flex: 0 0 300px;
+            height: 600px;
+            background: pink;
+            margin-top: 3rem;
+            margin-right: 0.625rem;
+            margin-left: 0.625rem;
+            padding: 0;
+        }
+
+        .hot-news, .basic-news {
+            margin-top: 3rem;
+        }
+
+        .cross-section {
+            width: 100%;
+            height: 500px;
+            background: pink;
+        }
+
+        .billboard {
+            width: 100%;
+            height: 120px;
+            background: #ebebeb;
+            margin: 2rem 0;
+        }
+
+        .rectangle {
+            width: 100%;
+            height: 270px;
+            background: #ebebeb;
+            margin: 2rem 0;
+        }
+
+        .halfpage {
+            width: 300px;
+            height: 600px;
+            background: #ebebeb;
+            margin: 2rem 0;
+        }
+
+        .hot-news h1 {
+            font-size: 1.5625rem;
+            font-weight: lighter;
+            line-height: 1.75rem;
+            margin-top: 1rem;
+            padding: 0 2rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            letter-spacing: -0.1px;
+        }
+
+        .basic-news h1 {
+            font-size: 1.0625rem;
+            font-weight: 500;
+            line-height: 1.25rem;
+            margin-top: 1rem;
+            padding: 0 1.25rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            letter-spacing: 0.1px;
+        }
+
+        .hot-news figure {
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding-top: 91.5%;
+            background: transparent;
+            overflow: hidden;
+            background: pink;
+        }
+
+        .basic-news figure {
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding-top: 79.5%;
+            background: transparent;
+            overflow: hidden;
+        }
+
+        .small-news figure {
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding-top: 84.5%;
+            background: transparent;
+            overflow: hidden;
+        }
+
+        .special-news figure {
+            position: relative;
+            width: 100%;
+            height: auto;
+            /*padding-top: 153.75%;*/
+            background: transparent;
+            overflow: hidden;
+        }
+
+        .hot-news figure > img, .basic-news figure > img, .small-news figure > img, .special-new figure > img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        @media screen and (max-width: 768px) {
+            .special-column {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 414px) and (max-width: 768px) {
+            .hot-news h1, .basic-news h1 {
+                -webkit-line-clamp: 5;
+            }
+        }
+
+        @media screen and (max-width: 414px) {
+            .basic-news img {
+            padding: 0 1.25rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+{{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+{{> body}}
+
+<script src="{{root}}assets/js/app.js"></script>
+</body>
+</html>
